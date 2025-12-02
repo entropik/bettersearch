@@ -110,11 +110,11 @@ class Bettersearch extends Plugin
 		$this->activateAxios();
 
         # add the css
-        $this->addCSS('/bettersearch/public/bettersearch.css');
+        $this->addCSS('/bettersearch/public/bettersearch.css?202511');
 
         # add the flexsearch and custom search script
         $this->addJS('/bettersearch/public/flexsearch.compact.min.js');
-        $this->addJS('/bettersearch/public/bettersearch.js');
+        $this->addJS('/bettersearch/public/bettersearch.js?202511');
 
 
         $searchfilter = [];
