@@ -275,8 +275,8 @@ class SearchController extends Controller
 		$content = str_replace('[TOC]', '', $content);
 		if(!$content){return false;} 
 
-		# Remove Shortcodes
-		$content = preg_replace('/\[:.*:\]/m', '', $content);
+		# Remove only shortcode markers, keep the text they wrap.
+		$content = preg_replace('/\[:[^\]]*:\]/', '', $content);
 		if(!$content){return false;} 
 		
 		# Remove horizontal rules
